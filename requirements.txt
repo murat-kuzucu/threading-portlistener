@@ -1,0 +1,5 @@
+asyncio>=3.4.3
+prompt_toolkit>=3.0.36
+colorama>=0.4.6
+rich>=13.0.0
+netifaces>=0.11.0 

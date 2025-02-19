@@ -1,52 +1,58 @@
-# Asynchronous Port Listener
+# Port Listener
 
-A multi-threaded, asynchronous port listener application that can monitor multiple ports simultaneously.
+> A modern, asynchronous port monitoring tool for pentesting with interactive CLI.
+## Overview
 
-## Features
+Port Listener is a powerful network monitoring tool that allows you to:
+- Monitor multiple ports simultaneously
+- Interact with connections through an intuitive CLI
+- Transfer files and establish shell sessions
+- Generate reverse shell commands
 
-- Multi-port listening capability
-- Asynchronous and multi-threaded architecture
-- User-friendly CLI interface
-- Session switching between port connections
-- Colored and rich terminal output
+## Quick Start
 
-## Installation
-
-1. Install the required dependencies:
 ```bash
+# Install
+git clone https://github.com/murat-kuzucu/threading-portlistener.git
+cd https://github.com/murat-kuzucu/threading-portlistener.git
+python3 -m venv threading-portlistener
+source threading-portlistener/bin/activate
 pip install -r requirements.txt
+
+# Run
+python main.py
 ```
 
-2. Run the program:
+## Commands
+
 ```bash
-python port_listener.py
+/add <port>          # Start port listener
+/remove <port>       # Stop port listener
+/list                # Show active listeners
+/switch <port>       # Switch to port session
+/connections <port>  # List port connections
+/shell              # Start interactive shell
+/upload <file>      # Upload file
+/help               # Show all commands
 ```
 
-## Usage
-
-The program supports the following commands:
-
-- `add <port>`: Add a new port listener
-- `remove <port>`: Remove an existing port listener
-- `list`: List active listeners
-- `switch <port> [conn_id]`: Switch to a port session
-- `connections <port>`: List active connections for a port
-- `send <message>`: Send message to active connection
-- `help`: Show help message
-- `exit`: Exit program
+💡 **Tip**: In an active session, type messages directly. Use `/` prefix for commands.
 
 ## Testing
 
-To test the program, you can use netcat in another terminal window:
-
 ```bash
+# Linux
 nc localhost <port>
+
+# Windows
+Test-NetConnection localhost -Port <port>
 ```
 
-## Requirements
+## Development
 
+### Requirements
 - Python 3.7+
 - asyncio
 - prompt_toolkit
 - rich
-- colorama 
+- colorama

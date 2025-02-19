@@ -56,3 +56,4 @@ Test-NetConnection localhost -Port <port>
 - prompt_toolkit
 - rich
 - colorama
+- netifaces

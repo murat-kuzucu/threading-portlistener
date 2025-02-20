@@ -14,7 +14,7 @@ Port Listener is a powerful network monitoring tool that allows you to:
 ```bash
 # Install
 git clone https://github.com/murat-kuzucu/threading-portlistener.git
-cd https://github.com/murat-kuzucu/threading-portlistener.git
+cd threading-portlistener/
 python3 -m venv threading-portlistener
 source threading-portlistener/bin/activate
 pip install -r requirements.txt

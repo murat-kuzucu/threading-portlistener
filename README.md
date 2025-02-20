@@ -17,10 +17,10 @@ git clone https://github.com/murat-kuzucu/threading-portlistener.git
 cd threading-portlistener/
 python3 -m venv threading-portlistener
 source threading-portlistener/bin/activate
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
 # Run
-python main.py
+python3 main.py
 ```
 
 ## Commands
